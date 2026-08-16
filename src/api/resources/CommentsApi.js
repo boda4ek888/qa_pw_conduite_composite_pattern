@@ -61,8 +61,7 @@ export class CommentsApi extends BaseApi {
 
   async assertCommentBodyHasCorrectValue(response, comment) {
     await this.step(
-      `Assert response body has
-     correct comment body`,
+      `Assert response body has correct comment body`,
       async () => {
         const body = await this.parseBody(response);
 
