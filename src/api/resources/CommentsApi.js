@@ -49,7 +49,7 @@ export class CommentsApi extends BaseApi {
   }
 
   async deleteComment(slug, commentId, token) {
-    return await this.step(`Follow user's profile`, async () => {
+    return await this.step(`Delete a comment`, async () => {
       return await this.client.delete(ROUTES.comments(slug, commentId).delete, {
         headers: {
           authorization: `Token ${token}`,
